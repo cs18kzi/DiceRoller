@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
          int numberentered = Integer.parseInt(et.getText().toString());
 
          Random r = new Random();
-         int number = r.nextInt(6);
+         int number = r.nextInt(10);
 
          tv.setText(Integer.toString(number));
 
