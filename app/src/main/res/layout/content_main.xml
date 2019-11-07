@@ -13,25 +13,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.326" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="on_button_click"
-        android:text="Roll the dice "
-        android:textSize="30sp"
+        android:text="I am feeling lucky"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numberTextView"
-        app:layout_constraintVertical_bias="0.233" />
+        app:layout_constraintVertical_bias="0.21" />
 
     <EditText
         android:id="@+id/editText"
@@ -40,21 +42,49 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Input number"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/numberTextView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.835" />
 
     <TextView
         android:id="@+id/score"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="score"
-        android:textSize="30sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/icebreaker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="on_icebreaker_click"
+        android:text="LETS PLAY D-ICEBREAKER"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.205" />
+
+    <TextView
+        android:id="@+id/questionsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icebreaker"
+        app:layout_constraintVertical_bias="0.329" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
