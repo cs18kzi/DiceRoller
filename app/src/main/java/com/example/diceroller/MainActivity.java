@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         stringArrayList.add("If you won a million dollars, what is the first thing you would buy");
         stringArrayList.add("if you could spend the day with one fictional character, who would it be?");
         stringArrayList.add("if you found a magical lantern and a genie gave you three wishes, what would you wish?");
-
+        stringArrayList.add("if you could rename yourself, what would you pick?");
         Random k = new Random();
         int random = k.nextInt((5+1));
         q.setText(stringArrayList.get(random));
