@@ -31,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        TextView tv = this.findViewById(R.id.numberTextView);
+        EditText et = this.findViewById(R.id.editText);
+        TextView st = this.findViewById(R.id.score);
+
+        et.setText("Pick a number from 1-10");
+        tv.setText("Feeling lucky?");
+        st.setText("Score");
+
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,20 +71,31 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
     public void on_button_click(View view){
 
+
+        EditText et = findViewById(R.id.editText);
         TextView tv = this.findViewById(R.id.numberTextView);
-        EditText et = this.findViewById(R.id.editText);
         TextView st = this.findViewById(R.id.score);
 
+        int numberEntered = -1;
 
-     try {
+        try {
+            numberEntered = Integer.parseInt(et.getText().toString());
+        } catch (NumberFormatException nfe) {
+            Toast.makeText(et.getContext(), "That's not a number!",
+                    Toast.LENGTH_LONG).show();
+        }
+
+        try {
          int numberentered = Integer.parseInt(et.getText().toString());
 
          Random r = new Random();
          int number = r.nextInt(10);
 
          tv.setText(Integer.toString(number));
+
 
          if (numberentered == number) {
              Toast.makeText(this, "Congratulations", Toast.LENGTH_SHORT).show();
